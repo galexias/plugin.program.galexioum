@@ -12,7 +12,7 @@ Currently, this version of the wizard supports:
 |  Add-on                            | Cache Clearing | Trakt | All-Debrid | Real-Debrid | Premiumize | Trakt API | TMDb | TVDB | OMDb | IMDb | Fanart.tv | Location | Username/Password/Login |
 |------------------------------------|:--------------:|:-----:|:----------:|:-----------:|:----------:|:---------:|:----:|:----:|:----:|:----:|:---------:|:--------:|:-----------------------:|
 | AutoCompletion                     | [x]            |       |            |             |            |           |      |      |      |      |           |          |                         |
-| Exodus Redux                       | [x]            | [x]   |            |             |            |           | [x]  |      |      | [x]  | [x]       |          |                         |
+| Incursion                       | [x]            | [x]   |            |             |            |           | [x]  |      |      | [x]  | [x]       |          |                         |
 | ExtendedInfo Script                | [x]            |       |            |             |            |           | [x]  |      |      |      |           |          |                         |
 | Fen                                |                | [x]   | [x]        | [x]         | [x]        |           | [x]  |      |      |      |           |          | [x] - EasyNews/Furk     |
 | Gaia                               | [x]            | [x]   | [x]        | [x]         | [x]        |           | [x]  |      |      | [x]  | [x]       |          |                         |
