@@ -59,6 +59,8 @@ class Config:
 
         # Themeing Menu Items
         self.ICONBUILDS = uservar.ICONBUILDS if not uservar.ICONBUILDS.endswith('://') else self.ADDON_ICON
+        self.ICONBACKUP = uservar.ICONBACKUP if not uservar.ICONBACKUP.endswith('://') else self.ADDON_ICON
+        self.ICONLOG = uservar.ICONLOG if not uservar.ICONLOG.endswith('://') else self.ADDON_ICON
         self.ICONMAINT = uservar.ICONMAINT if not uservar.ICONMAINT.endswith('://') else self.ADDON_ICON
         self.ICONSPEED = uservar.ICONSPEED if not uservar.ICONSPEED.endswith('://') else self.ADDON_ICON
         self.ICONAPK = uservar.ICONAPK if not uservar.ICONAPK.endswith('://') else self.ADDON_ICON
