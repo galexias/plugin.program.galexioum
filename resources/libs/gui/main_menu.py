@@ -69,7 +69,7 @@ class MainMenu:
         directory.add_separator()
         directory.add_dir('Builds', {'mode': 'builds'}, icon=CONFIG.ICONBUILDS, themeit=CONFIG.THEME1)
         # Quick access: Backup/Restore should be in the main menu (not buried in Maintenance)
-        directory.add_dir('Backup / Restore', {'mode': 'maint', 'name': 'backup'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME1)
+        directory.add_dir('Backup / Restore', {'mode': 'maint', 'name': 'backup'}, icon=CONFIG.ICONBACKUP, themeit=CONFIG.THEME1)
         directory.add_dir('Maintenance', {'mode': 'maint'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME1)
         if (tools.platform() == 'android' or CONFIG.DEVELOPER == 'true'):
             directory.add_dir('APK Installer', {'mode': 'apk'}, icon=CONFIG.ICONAPK, themeit=CONFIG.THEME1)
@@ -82,11 +82,11 @@ class MainMenu:
         if CONFIG.HIDECONTACT == 'No':
             directory.add_file('Contact', {'mode': 'contact'}, icon=CONFIG.ICONCONTACT, themeit=CONFIG.THEME1)
         directory.add_separator()
-        directory.add_file('Upload Log File', {'mode': 'uploadlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME1)
-        directory.add_file('View Errors in Log: {0}'.format(errorsfound), {'mode': 'viewerrorlog'}, icon=CONFIG.ICONMAINT,
+        directory.add_file('Upload Log File', {'mode': 'uploadlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME1)
+        directory.add_file('View Errors in Log: {0}'.format(errorsfound), {'mode': 'viewerrorlog'}, icon=CONFIG.ICONLOG,
                            themeit=CONFIG.THEME1)
         if errors > 0:
-            directory.add_file('View Last Error In Log', {'mode': 'viewerrorlast'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME1)
+            directory.add_file('View Last Error In Log', {'mode': 'viewerrorlast'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME1)
         directory.add_separator()
         if CONFIG.DEVELOPER == 'true':
             directory.add_dir('Developer Menu', {'mode': 'developer'}, icon=CONFIG.ADDON_ICON, themeit=CONFIG.THEME1)

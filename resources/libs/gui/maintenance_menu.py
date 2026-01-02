@@ -56,15 +56,15 @@ class MaintenanceMenu:
             ": [COLOR springgreen]{0}[/COLOR]".format(tools.convert_size(os.path.getsize(CONFIG.WIZLOG)))
 
         directory.add_file('Toggle Debug Logging', {'mode': 'enabledebug'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('Upload Log File', {'mode': 'uploadlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+        directory.add_file('Upload Log File', {'mode': 'uploadlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
         directory.add_file('View Errors in Log: [COLOR springgreen][B]{0}[/B][/COLOR]'.format(errorsfound),
-                           {'mode': 'viewerrorlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+                           {'mode': 'viewerrorlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
         if errors > 0:
-            directory.add_file('View Last Error In Log', {'mode': 'viewerrorlast'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('View Log File', {'mode': 'viewlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('View Wizard Log File', {'mode': 'viewwizlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+            directory.add_file('View Last Error In Log', {'mode': 'viewerrorlast'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
+        directory.add_file('View Log File', {'mode': 'viewlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
+        directory.add_file('View Wizard Log File', {'mode': 'viewwizlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
         directory.add_file('Clear Wizard Log File: [COLOR springgreen][B]{0}[/B][/COLOR]'.format(wizlogsize),
-                           {'mode': 'clearwizlog'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+                           {'mode': 'clearwizlog'}, icon=CONFIG.ICONLOG, themeit=CONFIG.THEME3)
 
     # Compatibility / legacy helpers (kept so existing routes don't break)
     def addon_menu(self):
@@ -86,10 +86,10 @@ class MaintenanceMenu:
     def backup_menu(self):
         current = CONFIG.BACKUPLOCATION if CONFIG.BACKUPLOCATION else 'Not Set'
         directory.add_file('Set Back Up Folder  [COLOR {0}](Current: {1})[/COLOR]'.format(CONFIG.COLOR2, current),
-                           {'mode': 'setbackuplocation'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('Clean Up Back Up Folder', {'mode': 'clearbackup'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('Backup Kodi (Full Build)', {'mode': 'backup', 'action': 'build'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
-        directory.add_file('Restore Kodi (Full Build)', {'mode': 'restore', 'action': 'build'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
+                           {'mode': 'setbackuplocation'}, icon=CONFIG.ICONBACKUP, themeit=CONFIG.THEME3)
+        directory.add_file('Clean Up Back Up Folder', {'mode': 'clearbackup'}, icon=CONFIG.ICONBACKUP, themeit=CONFIG.THEME3)
+        directory.add_file('Backup Kodi (Full Build)', {'mode': 'backup', 'action': 'build'}, icon=CONFIG.ICONBACKUP, themeit=CONFIG.THEME3)
+        directory.add_file('Restore Kodi (Full Build)', {'mode': 'restore', 'action': 'build'}, icon=CONFIG.ICONBACKUP, themeit=CONFIG.THEME3)
 
     def tweaks_menu(self):
         directory.add_dir('Advanced Settings', {'mode': 'advanced_settings'}, icon=CONFIG.ICONMAINT, themeit=CONFIG.THEME3)
